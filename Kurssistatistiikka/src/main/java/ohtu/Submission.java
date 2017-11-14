@@ -21,13 +21,13 @@ public class Submission {
         return exercises;
     }
 
-    @Override
-    public String toString() {
+//    @Override
+    public String tehtävät() {
         String tehtävät = "";
         for (int tehtävä: exercises) {
             tehtävät = tehtävät + tehtävä + " ";
         }
-        return "viikko "+week + ": tehtyjä tehtäviä yhteensä: " + exercises.length + ", aikaa kului " + hours + " tuntia, tehdyt tehtävät: " + tehtävät;
+        return tehtävät;
     }
     
 }
