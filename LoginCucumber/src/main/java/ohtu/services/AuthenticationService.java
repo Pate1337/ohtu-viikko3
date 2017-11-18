@@ -40,6 +40,26 @@ public class AuthenticationService {
 
     private boolean invalid(String username, String password) {
         // validity check of username and password
+        if (username.length() < 3) {
+            return true;
+        }
+        if (!username.matches("[a-z]*")) {
+            return true;
+        }
+//        for (User user : userDao.listAll()) {
+//            if (user.getUsername().equals(username)) {
+//                return true;
+//            }
+//        }
+        if (password.length() < 8) {
+            return true;
+        }
+        if (password.matches("[a-zA-Z]*")) {
+            return true; // Sisältää vain kirjaimia, joten invalid
+        }
+//        if (password.matches("[a-zA-Z]*")) {
+//            return true; //Ei sisällä numeroita
+//        }
 
         return false;
     }
